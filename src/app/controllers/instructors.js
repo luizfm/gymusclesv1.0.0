@@ -2,6 +2,11 @@ const { date, age } = require('../lib/utils')
 const Instructor = require('../controllers/models/Instructor')
 
 module.exports = {
+  index(req, res) {
+    Instructor.all(function(instructors) {
+      return res.render('instructors/index', { instructors })
+    })
+  },
   create(req, res) {
     return res.render('instructors/create')
   },
@@ -10,7 +15,7 @@ module.exports = {
       const keys = Object.keys(req.body)
       
     
-      for(key of keys) {
+      for(let key of keys) {
         if(req.body[key] == "") {
           return res.send("Please, fill all the fields")
         }
@@ -35,5 +40,28 @@ module.exports = {
     })
 
     
+  },
+  edit(req, res) {
+    Instructor.find(req.params.id, function(instructor) {
+      if(!instructor) return res.send('Instructor not found')
+
+      instructor.birth = date(instructor.birth).iso
+
+      return res.render('instructors/edit', { instructor })
+    })
+    
+  },
+  update(req, res) {
+     const keys = Object.keys(req.body)
+
+     for (let key of keys) {
+       if(req.body[key] == "") {
+         return res.send('Please, fill all the fields')
+       }
+     }
+
+     Instructor.update(req.body, function() {
+       return res.redirect(`instructors/${req.body.id}`)
+     })
   }
 }
