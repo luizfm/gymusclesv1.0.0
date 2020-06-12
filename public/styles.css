@@ -9,7 +9,11 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #7154c9;
+  background-image: url(https://conteudo.imguol.com.br/c/entretenimento/01/2018/06/12/aula-academia-afundo-treino-exercicio-abre-1528838780171_v2_1920x1251.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 header, footer {
@@ -19,10 +23,22 @@ header, footer {
 
 header {
   border-bottom: 1px solid #888;
+  display: grid;
+  grid-template-columns: 200px 800px;
 }
 
 footer {
   border-top: 1px solid #888;
+}
+
+.image-container {
+  height: 50px;
+  width: 200px;
+}
+
+.image-container img {
+  height: 50px;
+  width: 200px;
 }
 
 .footer {
@@ -41,7 +57,7 @@ footer {
 
   font-size: 18px;
   font-weight: bold;
-  color: #777;
+  color: #7154c9;
   text-decoration: none;
   
 
@@ -55,6 +71,29 @@ footer {
 
 /* ============== Container =============== */
 
+.container {
+  width: 100%;
+  min-height: 430px;
+  display: flex;
+
+  margin: 0 auto;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://midias.agazeta.com.br/2020/03/20/as-academias-estao-fechadas-desde-quinta-feira-no-es-por-causa-do-coronavirus-212529.jpg);
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}
+
+.container img {
+  border-radius: 16px;
+
+  box-shadow: 0px 0px 40px 0px white;
+}
 
 /* ============= Create ================== */
 
@@ -80,7 +119,8 @@ footer {
 
   margin: 45px auto;
 
-  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.2)
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .avatar {
@@ -159,6 +199,7 @@ footer {
 
   display: block;
   text-align: center;
+  
 }
 
 input {
@@ -196,6 +237,31 @@ button[type="submit"] {
 
 /* =========== Tabela de Index ========== */
 
+.card .newInstructor {
+  text-transform: uppercase;
+  
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  top: 8px;
+
+  background-color: #7154c9;
+
+  padding: 8px 8px;
+  border-radius: 8px;
+  width: 60px;
+  text-align: center;
+  
+  position: absolute;
+}
+
+.card .newInstructor a {
+  color: white;
+  text-decoration: none;
+}
+
+
 table {
   
   padding: 40px;
@@ -228,9 +294,13 @@ table tbody tr td:first-child span {
   box-shadow: 3px 1px 6px -4px rgba(0, 0, 0, 0.3)
 }
 
-td, th {
+td:not(:first-child), th {
   padding: 16px;
   border-bottom: 1px solid #ececec;
+  text-align: center;
+}
+td:first-child {
+  padding: 16px;
 }
 
 tr:last-child td {

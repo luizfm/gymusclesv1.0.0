@@ -17,5 +17,6 @@ routes.get('/instructors/:id', instructors.show)
 
 routes.post('/instructors', instructors.post)
 routes.put('/instructors', instructors.update)
+routes.delete('/instructors', instructors.delete)
 
 module.exports = routes
