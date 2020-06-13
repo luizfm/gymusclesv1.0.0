@@ -237,7 +237,8 @@ button[type="submit"] {
 
 /* =========== Tabela de Index ========== */
 
-.card .newInstructor {
+.card .newInstructor,
+.card .newMember {
   text-transform: uppercase;
   
   margin-left: 8px;
@@ -256,7 +257,8 @@ button[type="submit"] {
   position: absolute;
 }
 
-.card .newInstructor a {
+.card .newInstructor a,
+.card .newMember a {
   color: white;
   text-decoration: none;
 }
