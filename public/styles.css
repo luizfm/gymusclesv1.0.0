@@ -69,6 +69,10 @@ footer {
   color: #333;
 }
 
+footer .links a {
+  font-size: 28px;
+}
+
 /* ============== Container =============== */
 
 .container {

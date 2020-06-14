@@ -1,0 +1,78 @@
+<div class="item">
+  <div>Nome</div>
+  <div>
+    <input
+      type="text"
+      name="name"
+      value='{{member.name}}'
+      placeholder="Nome do membro"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>Avatar URL</div>
+  <div>
+    <input
+      type="url"
+      name="avatar_url"
+      value='{{member.avatar_url}}'
+      placeholder="http://"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>Altura</div>
+  <div>
+    <input
+      type="number"
+      name="height"
+      value='{{member.height}}'
+      placeholder="Altura em cm"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>Peso</div>
+  <div>
+    <input
+      type="number"
+      name="weight"
+      value='{{member.weight}}'
+      placeholder="Altura em kg"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>Sexo</div>
+  <div>
+    <span><input type="radio" name="gender" value='M' {% if member.gender == 'M' %} checked {% endif %}>Masculino</span>
+    <span><input type="radio" name="gender" value='F' {% if member.gender == 'F' %} checked {% endif %}>Feminino</span>
+  </div>
+</div>
+
+<div class="item">
+  <div>Data de Nascimento</div>
+  <div>
+    <input
+      type="date"
+      name="birth"
+      value="{{member.birth}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>Áreas</div>
+  <div>
+    <input
+      type="text"
+      name="services"
+      value='{{member.services}}'
+      placeholder="Coloque as áreas de atuação separadas por vírgula."
+      >
+  </div>
+</div>

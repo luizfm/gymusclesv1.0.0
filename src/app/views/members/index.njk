@@ -19,7 +19,6 @@
         <th>Altura</th>
         <th>Peso</th>
         <th>Sexo</th>
-        <th>Idade</th>
         <th>Área</th>
         <th>Ações</th>
       </tr>
@@ -28,13 +27,12 @@
       {% for member in members %}
         <tr>
           <td>
-            <span style="background-image: url ('{{member.avatar_url}}')"></span>
+            <span style="background-image: url('{{member.avatar_url}}')"></span>
             {{member.name}}
           </td>
           <td>{{member.height}}</td>
           <td>{{member.weight}}</td>
           <td>{{member.gender}}</td>
-          <td>{{member.age}}</td>
           <td>{{member.services}}</td>
           <td><a href="/members/{{member.id}}">Ver</a></td>
         </tr>
